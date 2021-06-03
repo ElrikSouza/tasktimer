@@ -1,0 +1,23 @@
+.timer {
+  --size: 300px;
+  position: relative;
+  background: none;
+  box-sizing: content-box;
+  border-radius: 50%;
+  border: 48px solid var(--main-color);
+  height: var(--size);
+  width: var(--size);
+}
+
+.timer_value {
+  font-family: monospace;
+  display: inline-block;
+  font-size: 3.75rem;
+  font-weight: 600;
+  color: var(--main-color);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

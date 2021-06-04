@@ -16,7 +16,7 @@ const secondsToTimeString = (seconds) => {
 
 export default function Timer({ currentTimeInSeconds }) {
   return (
-    <div className="timer">
+    <div className="timer timer_view__timer">
       <div className="timer_value">
         {secondsToTimeString(currentTimeInSeconds)}
       </div>

@@ -1,8 +1,7 @@
 .timer {
-  --size: 300px;
+  --size: 415px;
   position: relative;
   background: none;
-  box-sizing: content-box;
   border-radius: 50%;
   border: 48px solid var(--main-color);
   height: var(--size);

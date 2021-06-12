@@ -12,20 +12,33 @@ export default function TaskList({
   const onEnterKeyPress = useOnEnterKeyPress(onSubmit);
 
   return (
-    <div>
-      <TheInput
-        placeholder="Task name"
-        onKeyDown={onEnterKeyPress}
-        onChange={onChangeAddTaskValue}
-        value={addTaskValue}
-      />
+    <div className="tasklist-container">
       <div className="tasklist">
+        <div>
+          <TheInput
+            placeholder="Task name"
+            onKeyDown={onEnterKeyPress}
+            onChange={onChangeAddTaskValue}
+            value={addTaskValue}
+          />
+          <button
+            type="button"
+            onClick={onSubmit}
+            disabled={addTaskValue === ""}
+          >
+            Add Task
+          </button>
+        </div>
         {tasks.map((task) => {
           return (
             <div className="tasklist-item" key={task.id}>
               {task.name}
-              <button type="button" onClick={() => onDeleteTask(task.id)}>
-                Delete
+              <button
+                className="delete-task-btn"
+                type="button"
+                onClick={() => onDeleteTask(task.id)}
+              >
+                X
               </button>
             </div>
           );

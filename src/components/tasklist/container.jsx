@@ -1,8 +1,6 @@
-const DUAL_VIEW_THRESHOLD = 800;
+import TaskListDrawer from "./tasklist-drawer";
 
-function Drawer({ isVisible, children }) {
-  return <div>{children}</div>;
-}
+const DUAL_VIEW_THRESHOLD = 800;
 
 export default function TaskListContainier({ width, children }) {
   return (
@@ -10,7 +8,7 @@ export default function TaskListContainier({ width, children }) {
       {width >= DUAL_VIEW_THRESHOLD ? (
         <div className="taskview">{children}</div>
       ) : (
-        <Drawer>{children}</Drawer>
+        <TaskListDrawer>{children}</TaskListDrawer>
       )}
     </>
   );
